@@ -1,0 +1,395 @@
+\documentclass[12pt]{article}
+
+\tolerance=9999
+\emergencystretch=10pt
+\hyphenpenalty=10000
+\exhyphenpenalty=100
+\usepackage[english=nohyphenation]{hyphsubst}
+
+\usepackage{tikz} %% makes the beautiful figures in the document
+\usetikzlibrary{shadows}
+\usetikzlibrary{shadows.blur}
+
+\usepackage{amsmath} %% Allows inclution of mathematical figures
+\usepackage[a4paper,margin=1in]{geometry} %% Responsible for the margin and the headings of the document
+\usepackage{mathptmx} %% Times new roman font
+\usepackage{booktabs}
+\usepackage{tabularx} %% Type of table that allows fragmentation of long sentences inside cells in tables
+\usepackage{setspace}
+\usepackage{multicol} %% Merging columns in tables
+\usepackage{multirow} %% Merging rows in tables
+\usepackage{float}
+\usepackage{xcolor}
+\usepackage[table,xcdraw]{xcolor} %% used for coloring cells in tables
+\usepackage{fancyhdr} %% Allows custom heading and footer
+\usepackage{lastpage} %% Allows Referencing the last page of the document
+\usepackage{calc}
+\usepackage{lipsum} %% Random Words
+\usepackage{ragged2e}
+\usepackage{soul}
+\usepackage{tcolorbox}
+\usepackage{amssymb}
+\usepackage{pgfplots}
+\usepackage{tkz-euclide}
+\usetikzlibrary{angles}
+\usetikzlibrary{intersections,decorations.pathreplacing,positioning}
+\usetikzlibrary{arrows.meta}
+\pgfplotsset{compat=1.18}
+\usepgfplotslibrary{polar}
+
+\usepackage{amsthm}
+
+
+\usepgfplotslibrary{fillbetween}
+\usetikzlibrary{patterns}
+
+\usepackage{mathtools}
+
+\usepackage{enumitem}
+
+\usepackage{array}
+\setlength{\tabcolsep}{10pt}
+\renewcommand{\arraystretch}{1.5}
+\setlength{\arrayrulewidth}{0.35mm}
+\arrayrulecolor{black}
+
+
+%\usepackage[scaled=1.0]{helvet}             % Load Helvetica
+%\renewcommand{\familydefault}{\sfdefault}   % Set Helvetica as main font
+
+
+\usepackage[T1]{fontenc}
+\usepackage{gensymb}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\definecolor{h1}{HTML}{196B24}
+\definecolor{h2}{HTML}{C1F0C7} %% Allows a custom color in the document using the hex code
+
+%\pagestyle{SILPhdr} %% sets the desired page style of the entire document. Specifically, the headings and footers
+
+\linespread{1.0}
+
+\begin{document}
+	\begin{center}
+		Suladay, Axelcris G. \hfill BS Physics 1 \hspace*{0.25in} Math 123 \hspace*{0.25in} 4/20/2026
+	\end{center}
+	
+	\noindent
+	{\Large \textbf{11.1: Vector - Basic Concepts}} \\
+	\hrule
+	
+	\begin{enumerate}
+		\item[1.)] The line segment from \(\left(-9,~2\right)\) to \(\left(4,~-1\right)\)
+			\begin{proof}[Solution]
+				Given the following
+				\[A = \left(-9,~2\right)\qquad B = \left(4,~-1\right)\]
+				determine the vector using,
+				\[\overrightarrow{AB} = \vec{v} = \langle b_1-a_1,b_2-a_2\rangle\]
+				then,
+				\[\vec{v} = \langle 4-\left(-9\right),~-1-2 \rangle = \langle 13,~-3\rangle\]
+				and the magnitude is
+				\[\|\vec{v}\| = \sqrt{a_1^2+a_2^2} = \sqrt{\left(13\right)^2+\left(-3\right)^2} = \sqrt{178}\]
+			\end{proof}
+			\hrule
+		
+		\item[3.)] The position vector for \(\left(-3,~2,~10\right)\)
+			\begin{proof}[Solution]
+				This is just simply
+				\[\vec{v} = \langle -3,~2,~10\rangle\]
+				and the magnitude is
+				\[\|\vec{v}\| = \sqrt{a_1^2+a_2^2+a_3^2} = \sqrt{\left(-3\right)^2+\left(2\right)^2+\left(10\right)^2} = \sqrt{113}\]
+			\end{proof}
+			\hrule
+			
+		\item[5.)] The vector \(\vec{v} = \langle 6,~-4,~0\rangle\) starts at the point \(P = \left(-2,~5,~-1\right)\). at what point does the vector end?
+			\begin{proof}[Solution]
+				Given the following
+				\[\vec{v} = \langle 6,~-4,~0\rangle \qquad P = \left(-2,~5,~-1\right)\]
+				the end point of the vector can be expressed as
+				\[Q = \langle x_2,~y_2,~z_2\rangle\]
+				then,
+				\begin{align*}
+					\vec{v} = \overrightarrow{PQ} & = \langle x_2-a_1,~y_2-a_2,~z_2-a_3\rangle \\
+					& = \langle x_2-\left(-2\right),~y_2-\left(5\right),~z_2-\left(-1\right)\rangle \\
+					& = \langle x_2+2,~y_2-5,~z_2+1\rangle
+				\end{align*}
+				and
+				\[\langle x_2+2,~y_2-5,~z_2+1\rangle = \langle 6,~-4,~0\rangle\]
+				then the values of each components are
+				\begin{align*}
+					x_2+2=6\quad & \Longrightarrow \quad x_2=4 \\
+					y_2-5=-4 \quad & \Longrightarrow \quad y_2=1 \\
+					z_2+1 = 0 \quad & \Longrightarrow \quad z_2=-1
+				\end{align*}
+				thus, the endpoint of the vector is 
+				\[Q = \langle 4,~1,~-1\rangle\]
+			\end{proof}
+	\end{enumerate}
+	
+	\noindent
+	{\Large \textbf{11.2: Vector Arithmetic}} \\
+	\hrule
+	
+	\begin{enumerate}
+		\item[1.)] Given \(\vec{a} = \langle 8,~5\rangle\) and \(\vec{b} = \langle -3,~6\rangle\) compute each of the following:
+			\begin{enumerate}
+				\item[a.)] \(6\vec{a}\)
+					\begin{proof}[Solution]
+						Given that
+						\[\vec{a} = \langle 8,~5\rangle\]
+						we can solve this using scalar multiplication which is expressed as
+						\[c\vec{a} = \langle ca_1,~ca_2,~ca_3\rangle\]
+						then,
+						\begin{align*}
+							6\vec{a} & = \langle 6\left(8\right),~6\left(5\right)\rangle \\
+							& = \langle 48,~30\rangle
+						\end{align*}
+					\end{proof}
+				
+				\item[b.)] \(7\vec{b} - 2\vec{a}\)
+					\begin{proof}[Solution]
+						First we solve each term using scalar multiplication
+						\begin{align*}
+							7\vec{b} & = \langle 7\left(-3\right),~7\left(6\right)\rangle \\
+							& = \langle -21,~42\rangle \\
+							2\vec{a} & = \langle 2\left(8\right),~2\left(5\right)\rangle \\
+							& = \langle 16,~10\rangle
+						\end{align*}
+						then, we solve this using vector subtraction which is expressed as
+						\[\vec{a}-\vec{b} = \langle a_1-b_1,~a_2-b_2,~a_3-b_3\rangle\]
+						thus,
+						\begin{align*}
+							7\vec{b}-2\vec{a} & = 	\langle -21-16,~42-10\rangle \\
+							& = \langle -37,~32\rangle
+						\end{align*}
+					\end{proof}
+				
+				\item[c.)] \(\displaystyle \left\|10\vec{a}+3\vec{b}\right\|\)
+					\begin{proof}[Solution]
+						First we solve each term using scalar multiplication
+						\begin{align*}
+							10\vec{a} & = \langle 10\left(8\right),~10\left(5\right)\rangle \\
+							& = \langle 80,~50\rangle \\
+							3\vec{b} & = \langle 3\left(-3\right),~3\left(6\right)\rangle \\
+							& = \langle -9,~18\rangle
+						\end{align*}
+						then,
+						\begin{align*}
+							10\vec{a}+3\vec{b} & = \langle 80+\left(-9\right),~50+18\rangle \\
+							& = \langle 71,~68\rangle
+						\end{align*}
+						then, we solve for the magnitude which is expressed as
+						\[\|\vec{v}\| =\sqrt{a_1^2+a_2^2+a_3^2}\]
+						thus,
+						\begin{align*}
+							\left\|10\vec{a}+3\vec{b}\right\| & = \sqrt{\left(71\right)^2+\left(68\right)^2} \\
+							& = \sqrt{9665}
+						\end{align*}
+					\end{proof}
+			\end{enumerate}
+			\hrule
+		
+		\item[3.)] Find a unit vector that points in the same direction as \(\vec{q} = \vec{i}+3\vec{j}+9\vec{k}\)
+			\begin{proof}[Solution]
+				Given that
+				\[\vec{q} = \vec{i}+3\vec{j}+9\vec{k}\]
+				then,
+				\[\vec{q} = \langle 1,~3,~9\rangle\]
+				now we get the magnitude
+				\begin{align*}
+					\|\vec{q}\| & = \sqrt{\left(1\right)^2+\left(3\right)^2+\left(9\right)^2} \\
+					& = \sqrt{91}
+				\end{align*}
+				thus, the new vector is
+				\begin{align*}
+					\vec{r} & = \frac{1}{\|\vec{q}\|}\vec{q} \\
+					& = \frac{1}{\sqrt{91}} \langle 1,~3,~9\rangle \\
+					& = \left\langle \frac{1}{\sqrt{91}},~\frac{3}{\sqrt{91}},~\frac{9}{\sqrt{91}}\right\rangle
+				\end{align*}
+				it can be rewritten as
+				\[\vec{r} = \frac{1}{\sqrt{91}}\vec{i}+\frac{3}{\sqrt{91}}\vec{j}+\frac{9}{\sqrt{91}}\vec{k}\]
+				verify that we have obtained a unit vector
+				\[\|\vec{r}\| = \sqrt{\left(\frac{1}{\sqrt{91}}\right)^2+\left(\frac{3}{\sqrt{91}}\right)^2+\left(\frac{9}{\sqrt{91}}\right)^2} = \sqrt{\frac{91}{91}} = 1\]
+			\end{proof}
+			\hrule
+		
+		\item[5.)] Determine if \(\vec{a} = \langle 3,~-5,~1\rangle\) and \(\vec{b} = \langle 6,~-2,~2\rangle\) are parallel vectors.
+			\begin{proof}[Solution]
+				Accordingly, parallel vectors should be expressed as
+				\[\vec{a} = c\vec{b}\]
+				however, in this item, the two vectors are not parallel. Because, the \(x\) and \(z\) component of both vectors are equal if components of \(\vec{b}\) is multiplied by \(\displaystyle \frac{1}{2}\). Yet, their \(y\) components are not equal since \(\displaystyle -2\left(\frac{1}{2}\right) = -1 \neq -5\). In other word, we cannot make \(\vec{b}\) be a scalar multiple of \(\vec{a}\).
+			\end{proof}
+	\end{enumerate}
+	
+	\noindent
+	{\Large \textbf{11.3: Dot Product}} \\
+	\hrule
+		\begin{enumerate}
+			\item[1.)] Determine the dot product, \(\vec{a} \cdot \vec{b}\). \(\vec{a} = \langle 9,~5,~-4,~2\rangle\), \(\vec{b} = \langle -3,~-2,~7,~-1\rangle\)
+				\begin{proof}[Solution]
+					Dot product is expressed as
+					\[\vec{a}\cdot \vec{b} = a_1b_1+a_2b_2+a_3b_3\]
+					thus,
+					\begin{align*}
+						\vec{a}\cdot\vec{b} & = \left(9\right)\left(-3\right)+\left(5\right)\left(-2\right)+\left(-4\right)\left(7\right)+\left(2\right)\left(-1\right) \\
+						& = -27-10-28-2 \\
+						& = -67
+					\end{align*}
+				\end{proof}
+				\hrule
+			
+			\item[3.)] Determine the dot product, \(\vec{a} \cdot \vec{b}\). \(\|\vec{a}\| = 5\), \(\displaystyle \left\|\vec{b}\right\| = \frac{3}{7}\) and the angle between the two vectors is \(\displaystyle \theta = \frac{\pi}{12}\)
+				\begin{proof}[Solution]
+					Given the following
+					\[\|\vec{a}\| = 5, \qquad \left\|\vec{b}\right\| = \frac{3}{7},\qquad \theta = \frac{\pi}{12}\]
+					we can calculate the dot product using the following theorem
+					\[\vec{a}\cdot\vec{b} = \|\vec{a}\| \left\|\vec{b}\right\|\cos \left(\theta\right)\]
+					thus,
+					\[\vec{a}\cdot\vec{b} = \left(5\right)\left(\frac{3}{7}\right)\cos\left(\frac{\pi}{12}\right) = \frac{15\sqrt{6}+15\sqrt{2}}{28} = 2.0698\]
+				\end{proof}
+				\hrule
+			
+			\item[5.)] Determine the angle between the vectors. \(\vec{a} = \vec{i} + 3\vec{j}-2\vec{k}\), \(\vec{b} = \langle -9,~1,~-5\rangle\)
+				\begin{proof}[Solution]
+					Given the following 
+					\[\vec{a} = \vec{i} + 3\vec{j} -2\vec{k}\Rightarrow \langle 1,~3,~-2\rangle \qquad \vec{b} = \langle -9,~1,~-5\rangle\]
+					to solve the angle between the two vectors, we will use the same theorem which is expressed as
+					\[\vec{a}\cdot\vec{b} = \|\vec{a}\|\left\|\vec{b}\right\|\cos\left(\theta\right) \Longrightarrow \cos\left(\theta\right) = \frac{\vec{a}\cdot\vec{b}}{\|\vec{a}\|\left\|\vec{b}\right\|} \Longrightarrow \theta = \cos^{-1}\left(\frac{\vec{a}\cdot\vec{b}}{\|\vec{a}\|\left\|\vec{b}\right\|}\right)\]
+					we first get the dot product and magnitude of the two vectors
+					\begin{align*}
+						\vec{a}\cdot\vec{b} & = \left(1\right)\left(-9\right)+\left(3\right)\left(1\right)+\left(-2\right)\left(-5\right) \\
+						& = -9+3+10 \\
+						& = 4 \\
+						\|\vec{a}\| & = \sqrt{\left(1\right)^2+\left(3\right)^2+\left(-2\right)^2} \\
+						& = \sqrt{14} \\
+						\left\|\vec{b}\right\| & = \sqrt{\left(-9\right)^2+\left(1\right)^2+\left(-5\right)^2} \\
+						& = \sqrt{107}
+					\end{align*}
+					thus,
+					\begin{align*}
+						\theta & = \cos^{-1} \left(\frac{4}{\left(\sqrt{14}\right)\left(\sqrt{107}\right)}\right) \\
+						& = \cos^{-1} \left(0.103348\right) \\
+						& = 1.467~\text{radians} = 84.07~\text{degrees}
+					\end{align*}
+				\end{proof}
+				\hrule
+			
+			\item[7.)] Determine if the two vectors are parallel, orthogonal or neither. \(\vec{a} = \langle 3,~10\rangle\), \(\vec{b} = \langle 4,~-1\rangle\).
+				\begin{proof}[Solution]
+					Accordingly, if two vectors are orthogonal/perpendicular then
+					\[\vec{a}\cdot\vec{b} = 0\]
+					we calculate first the dot product of the two vectors
+					\[\vec{a}\cdot\vec{b} = \left(3\right)\left(4\right)+\left(10\right)\left(-1\right) = 12-10 = 2\]
+					Accordingly,  if two vectors are parallel then the angle between them is either 0 degrees (pointing in the same direction) or 180 degrees(pointing in the opposite direction) this would mean that one of the following would have to be true
+					\[\vec{a}\cdot\vec{b} = \|\vec{a}\|\left\|\vec{b}\right\|\left(\theta = 0\degree\right)\quad \text{OR} \quad \vec{a}\cdot\vec{b} = -\|\vec{a}\|\left\|\vec{b}\right\|\left(\theta = 180\degree \right)\]
+					we get first the magnitude of each vector
+					\begin{align*}
+						\|\vec{a}\| & = \sqrt{\left(3\right)^2+\left(10\right)^2} \\
+						& = \sqrt{109} \\
+						\left\|\vec{b}\right\| & = \sqrt{\left(4\right)^2+\left(-1\right)^2} \\
+						& = \sqrt{17}
+					\end{align*}
+					\(\therefore\) the vectors are neither perpendicular or parallel.
+				\end{proof}
+				\hrule
+			
+			\item[9.)] Determine if the two vectors are parallel, orthogonal or neither. Given \(\vec{a} = \langle -8,~2\rangle\) and \(\vec{b} = \langle -1,~-7 \rangle\) compute \(\displaystyle \text{proj}_{\vec{a}}\vec{b}\).
+				\begin{proof}[Solution]
+					To solve this problem, we will use the formula
+					\[\text{proj}_{\vec{a}}\vec{b} = \frac{\vec{a}\cdot\vec{b}}{\|\vec{a}\|^2}\vec{a}\]
+					we get first the dot product and magnitude
+					\begin{align*}
+						\vec{a}\cdot\vec{b} & = \left(-8\right)\left(-1\right)+\left(2\right)\left(-7\right) \\
+						& = 8-14 \\
+						& = -6 \\
+						\|\vec{a}\| & = \sqrt{\left(-8\right)^2+\left(2\right)^2} \\
+						& = 2\sqrt{17}
+					\end{align*}
+					thus,
+					\begin{align*}
+						\text{proj}_{\vec{a}}\vec{b} & = \frac{-6}{\left(2\sqrt{17}\right)^2}\langle -8,~2\rangle \\
+						& = -\frac{3}{34}\langle -8,~2\rangle \\
+						& = \left\langle \left(-\frac{3}{34}\right)\left(-8\right),~\left(-\frac{3}{34}\right)\left(2\right) \right\rangle \\
+						& = \left\langle \frac{12}{17},~-\frac{3}{17}\right\rangle
+					\end{align*}
+				\end{proof}
+		\end{enumerate}
+	
+	\noindent
+	{\Large \textbf{11.4: Cross Product}} \\
+	\hrule
+		\begin{enumerate}
+			\item[1.)] If \(\vec{w} = \langle 3,~-1,~5\rangle\) and \(\vec{v} = \langle 0,~4,~-2\rangle\) compute \(\vec{v} \times \vec{w}\).
+				\begin{proof}[Solution]
+					Given the following
+					\[\vec{w} = \langle 3,~-1,~5\rangle\qquad \vec{v} = \langle 0,~4,~-2\rangle\]
+					to solve for the cross product of the two vector, we will use the following expression
+					\[\vec{a}\times\vec{b} = \langle a_2b_3-a_3b_2,~a_3b_1-a_1b_3,~a_1b_2-a_2b_1\rangle\]
+					then,
+					\begin{align*}
+						\vec{v}\times\vec{w} & = \langle \left(4\right)\left(5\right)-\left(-2\right)\left(-1\right),~\left(-2\right)\left(3\right)-\left(0\right)\left(5\right),~\left(0\right)\left(-1\right)-\left(4\right)\left(3\right)\rangle \\
+						& = \langle 20-2,~-6-0,~0-12\rangle \\
+						& = \langle 18,~-6,~-12\rangle
+					\end{align*}
+					this can also be solve using method of cofactors
+					\[\vec{a}\times\vec{b} = \begin{vmatrix}
+						~ a_2 & a_3 ~ \\
+						~ b_2 & b_3 ~ 
+					\end{vmatrix}\vec{i} - \begin{vmatrix}
+						~ a_1 & a_3 ~ \\
+						~ b_1 & b_3 ~
+					\end{vmatrix}\vec{j} + \begin{vmatrix}
+						~ a_1 & a_2 ~ \\
+						~ b_1 & b_2 ~
+					\end{vmatrix} \vec{k}\]
+					where,
+					\[\begin{vmatrix}
+						~a & b~ \\
+						~c & d~
+					\end{vmatrix} = ad-bc\]
+					then,
+					\begin{align*}
+						\vec{v}\times\vec{w} & = \begin{vmatrix}
+							~4 & -2 ~ \\
+							~-1 & 5~
+						\end{vmatrix}\vec{i} - \begin{vmatrix}
+							~0 & -2~ \\
+							~ 3&5~
+						\end{vmatrix}\vec{j} + \begin{vmatrix}
+							~0 &4~ \\
+							~ 3&-1~
+						\end{vmatrix}\vec{k} \\
+						& = \left[\vec{i}\left(4\right)\left(5\right)-\vec{i}\left(-2\right)\left(-1\right)\right]-\left[\vec{j}\left(0\right)\left(5\right)-\vec{j}\left(-2\right)\left(3\right)\right]+\left[\vec{k}\left(0\right)\left(-1\right)-\vec{k}\left(4\right)\left(3\right)\right] \\
+						& = 18\vec{i}-6\vec{j}-12\vec{k} \\
+						& \Leftrightarrow \langle 18,~-6,~-12\rangle
+					\end{align*}
+				\end{proof}
+				\hrule
+			
+			\item[3.)] Find a vector that is orthogonal to the plane containing the points \(P = \left(3,~0,~1\right)\), \(Q = \left(4,~-2,~1\right)\), and \(R = \left(5,~3,~-1\right)\)
+				\begin{proof}[Solution]
+					We will get two vector from the given points
+					\begin{align*}
+						\overrightarrow{PQ} & = \langle 4-3,~-2-0,~1-1\rangle = \langle 1,~-2,~0\rangle \\
+						\overrightarrow{PR} & = \langle 5-3,~3-0,~-1-1\rangle = \langle 2,~3,~-2\rangle
+					\end{align*}
+					get the cross product
+					\begin{align*}
+						\overrightarrow{PQ} \times \overrightarrow{PR} & = \begin{vmatrix}
+							~-2 &0~ \\
+							~3&-2~
+						\end{vmatrix}\vec{i} - \begin{vmatrix}
+							~1&0~ \\
+							~2&-2~
+						\end{vmatrix}\vec{j} + \begin{vmatrix}
+							~1&-2~ \\
+							~2&3~
+						\end{vmatrix}\vec{k} \\
+						& = \left[\vec{i}(-2)(-2)-\vec{i}(0)(3)\right]-\left[\vec{j}(1)(-2)-\vec{j}(0)(2)\right]+\left[\vec{k}(1)(3)-\vec{k}(-2)(2)\right] \\
+						& = 4\vec{i}+2\vec{j}+7\vec{k}
+					\end{align*}
+				\end{proof}
+		\end{enumerate}
+	
+\end{document}
