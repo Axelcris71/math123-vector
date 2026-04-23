@@ -19,8 +19,7 @@
 \usepackage{multicol} %% Merging columns in tables
 \usepackage{multirow} %% Merging rows in tables
 \usepackage{float}
-\usepackage{xcolor}
-\usepackage[table,xcdraw]{xcolor} %% used for coloring cells in tables
+\usepackage{xcolor} %% used for coloring cells in tables
 \usepackage{fancyhdr} %% Allows custom heading and footer
 \usepackage{lastpage} %% Allows Referencing the last page of the document
 \usepackage{calc}
@@ -34,11 +33,11 @@
 \usetikzlibrary{angles}
 \usetikzlibrary{intersections,decorations.pathreplacing,positioning}
 \usetikzlibrary{arrows.meta}
-\pgfplotsset{compat=1.18}
 \usepgfplotslibrary{polar}
 
-\usepackage{amsthm}
+\usepackage{hanging}
 
+\usepackage{amsthm}
 
 \usepgfplotslibrary{fillbetween}
 \usetikzlibrary{patterns}
@@ -47,19 +46,20 @@
 
 \usepackage{enumitem}
 
-\usepackage{array}
-\setlength{\tabcolsep}{10pt}
-\renewcommand{\arraystretch}{1.5}
-\setlength{\arrayrulewidth}{0.35mm}
-\arrayrulecolor{black}
+
+
+\newcommand*\bigcdot{\mathpalette\bigcdot@{.5}}
+\newcommand*\bigcdot@[2]{\mathbin{\vcenter{\hbox{\scalebox{#2}{$\m@th#1\bullet$}}}}}
 
 
 %\usepackage[scaled=1.0]{helvet}             % Load Helvetica
 %\renewcommand{\familydefault}{\sfdefault}   % Set Helvetica as main font
 
-
 \usepackage[T1]{fontenc}
+
 \usepackage{gensymb}
+\usepackage{orcidlink}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -72,7 +72,7 @@
 
 \begin{document}
 	\begin{center}
-		Suladay, Axelcris G. \hfill BS Physics 1 \hspace*{0.25in} Math 123 \hspace*{0.25in} 4/20/2026
+		Suladay, Axelcris G. \orcidlink{https://orcid.org/0009-0007-6882-7636} \hfill BS Physics 1 \hspace*{0.25in} Math 123 \hspace*{0.25in} 4/20/2026
 	\end{center}
 	
 	\noindent
